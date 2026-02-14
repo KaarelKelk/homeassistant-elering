@@ -1,0 +1,19 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+filterwarnings = [
+    "ignore::DeprecationWarning:josepy.*",
+    "ignore::DeprecationWarning:acme.*",
+    "ignore::DeprecationWarning:homeassistant.*",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+
+[tool.black]
+target-version = ["py312"]
+line-length = 88

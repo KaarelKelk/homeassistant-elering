@@ -1,0 +1,61 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Elering Estfeed",
+        "description": "Enter your Estfeed API credentials.",
+        "data": {
+          "api_host": "API Host",
+          "client_id": "Client ID",
+          "client_secret": "Client Secret"
+        },
+        "data_description": {
+          "api_host": "The base URL of the Estfeed API.",
+          "client_id": "Your OAuth2 client ID.",
+          "client_secret": "Your OAuth2 client secret."
+        }
+      },
+      "select_eic": {
+        "title": "Select metering point",
+        "description": "Choose the metering point you want to monitor.",
+        "data": {
+          "eic": "Metering point"
+        },
+        "data_description": {
+          "eic": "The EIC code of the metering point."
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid client ID or client secret.",
+      "cannot_connect": "Unable to reach the Estfeed API.",
+      "no_metering_points": "No metering points found for these credentials.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This metering point is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Elering Estfeed Options",
+        "description": "Adjust polling interval, data resolution, history backfill, and commodity toggles.",
+        "data": {
+          "scan_interval": "Scan interval (seconds)",
+          "resolution": "Data resolution",
+          "history_backfill_days": "History backfill (days, 0 = disabled)",
+          "enable_electricity": "Enable electricity metering",
+          "enable_gas": "Enable gas metering"
+        },
+        "data_description": {
+          "scan_interval": "How often to poll the API for new data (60–3600 seconds).",
+          "resolution": "Granularity of fetched metering data.",
+          "history_backfill_days": "Number of days to backfill on setup (0 disables automatic backfill).",
+          "enable_electricity": "Enable or disable electricity metering points.",
+          "enable_gas": "Enable or disable gas metering points."
+        }
+      }
+    }
+  }
+}

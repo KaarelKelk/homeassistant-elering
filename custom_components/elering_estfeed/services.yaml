@@ -1,0 +1,17 @@
+fetch_history:
+  name: Fetch history
+  description: >-
+    Fetch historical metering data for all configured Elering Estfeed
+    metering points and cache it locally.
+  fields:
+    days:
+      name: Days
+      description: Number of days of history to fetch (1–365).
+      required: false
+      default: 90
+      example: 90
+      selector:
+        number:
+          min: 1
+          max: 365
+          mode: box

@@ -1,0 +1,9 @@
+# Runtime dependencies for Elering Estfeed integration.
+#
+# Home Assistant bundles these packages, so they are already available at
+# runtime inside HA.  They are listed here explicitly so that local / CI
+# environments outside of HA can install everything the integration imports.
+
+aiohttp==3.11.11
+voluptuous==0.15.2
+homeassistant==2025.1.4
